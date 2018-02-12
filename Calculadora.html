@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Calcu">
+<head>
+	<meta charset=utf-8>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+	<script src="app.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.contenedor{
+			position: relative;
+			top:125px;
+			left: 500px	;
+		}
+		.texto{
+			font-size: 30px;
+			font-family: Arial,Helvetica;
+			color: white;
+			border:0px;
+			background: #808080;
+			width: 325.8px;
+			height: 80px;
+		}
+		.numero{
+			font-size: 30px;
+			font-family: Arial,Helvetica;
+			color: white;
+			border:0px;
+			background: #1E90FF;
+			width: 80px;
+			height: 80px;
+		}
+		.limpiar{
+			font-size: 30px;
+			font-family: Arial,Helvetica;
+			color: white;
+			border:0px;
+			background: #1E90FF;
+			width: 162.9px;
+			height: 80px;
+		}
+	</style>
+</head>
+<body ng-controller="CalcuController">
+<div class="contenedor">
+<table>
+	<tr>
+		<td colspan="4"><input type="text" class="texto" value={{num}}></td>
+	</tr>
+	<tr>
+		<td><input type="button" class="numero" ng-click="agr(7)" value="7"></td>
+		<td><input type="button" class="numero" ng-click="agr(8)" value="8"></td>
+		<td><input type="button" class="numero" ng-click="agr(9)" value="9"></td>
+		<td><input type="button" class="numero" ng-click="agr('/')" value="/"></td>
+	</tr>
+	<tr>
+		<td><input type="button" class="numero" ng-click="agr(4)" value="4"></td>
+		<td><input type="button" class="numero" ng-click="agr(5)" value="5"></td>
+		<td><input type="button" class="numero" ng-click="agr(6)" value="6"></td>
+		<td><input type="button" class="numero" ng-click="agr('*')" value="x"></td>
+	</tr>
+	<tr>
+		<td><input type="button" class="numero" ng-click="agr(1)" value="1"></td>
+		<td><input type="button" class="numero" ng-click="agr(2)" value="2"></td>
+		<td><input type="button" class="numero" ng-click="agr(3)" value="3"></td>
+		<td><input type="button" class="numero" ng-click="agr('-')" value="-"></td>
+	</tr>
+	<tr>
+		<td><input type="button" class="numero" ng-click="agr('.')" value="."></td>
+		<td><input type="button" class="numero" ng-click="agr(0)" value="0"></td>
+		<td><input type="button" class="numero" ng-click="igual()" value="="></td>
+		<td><input type="button" class="numero" ng-click="agr('+')" value="+"></td>
+	</tr>
+	<tr>
+		<td colspan="2" ><input type="button" ng-click="limpiar()" class="limpiar" value="CE"></td>
+		<td colspan="2" ><input type="button" ng-click="borrar()" class="limpiar" value="Borrar"></td>
+	</tr>
+</table>
+</div>
+</body>
+</html>
